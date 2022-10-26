@@ -1,0 +1,16 @@
+<div *ngIf="!footer" style="display: flex; justify-content: flex-end; padding-right: 20px; margin-top: 10px;">
+    <select title="lang" (change)="onChange()" [(ngModel)]="activeLocale">
+        <option *ngFor="let locale of locales" [value]="locale.code">
+            {{ locale.name }}
+        </option>
+    </select>
+</div>
+
+<div *ngIf="footer"
+    style="display: flex; justify-content: flex-end; padding-right: 25px; padding-left: 25px; margin-top: 10px;">
+    <ng-container *ngFor="let locale of locales">
+        &nbsp; • &nbsp; <a [href]="'/' + locale.code">
+            {{ locale.name }}
+        </a>
+    </ng-container>
+</div>

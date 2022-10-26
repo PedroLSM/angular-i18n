@@ -4,6 +4,17 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-i18n": {
+      "i18n": {
+        "sourceLocale": "pt-BR",
+        "locales": {
+          "es": {
+            "translation": "src/locale/messages.es.xlf"
+          },
+          "en": {
+            "translation": "src/locale/messages.en.xlf"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,6 +72,39 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "pt": {
+              "localize": [
+                "pt-BR"
+              ],
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
+            "es": {
+              "localize": [
+                "es"
+              ],
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
+            "en": {
+              "localize": [
+                "en"
+              ],
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -73,6 +117,15 @@
             },
             "development": {
               "browserTarget": "angular-i18n:build:development"
+            },
+            "pt": {
+              "browserTarget": "angular-i18n:build:pt"
+            },
+            "es": {
+              "browserTarget": "angular-i18n:build:es"
+            },
+            "en": {
+              "browserTarget": "angular-i18n:build:en"
             }
           },
           "defaultConfiguration": "development"
